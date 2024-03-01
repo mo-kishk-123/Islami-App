@@ -5,6 +5,7 @@ import 'package:islamy_app/Home/tabs/quran_tab.dart';
 import 'package:islamy_app/Home/tabs/radio_tab.dart';
 import 'package:islamy_app/Home/tabs/sebha_tab.dart';
 import 'package:islamy_app/Home/tabs/setting_tab.dart';
+import 'package:islamy_app/sura_details.dart';
 
 
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Home.routeName : (context) => Home(),
         QuranTab.routeName : (context) => QuranTab(),
+        SuraDetailsScreen.routeName : (context) => SuraDetailsScreen(),
         Sebha.routeName : (context) => Sebha(),
         Ahadeth.routeName : (context) => Ahadeth(),
         Radioo.routeName : (context) => Radioo(),
