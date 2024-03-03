@@ -55,8 +55,8 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                   itemBuilder: (context, index) {
                     return Text(verses[index],
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 20,
+                    style: GoogleFonts.elMessiri(
+                      fontSize: 18,
                       fontWeight: FontWeight.w600,
                     ),);
                   },
