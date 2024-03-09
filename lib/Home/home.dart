@@ -48,10 +48,10 @@ class _HomeState extends State<Home> {
               selectedItemColor: Colors.black,
               unselectedItemColor: Colors.white,
               unselectedIconTheme: IconThemeData(
-                size: 35,
+                size: 30,
               ),
               selectedIconTheme: IconThemeData(
-                size: 30,
+                size: 25,
               ),
               currentIndex: index,
               onTap: (value) {
