@@ -1,39 +1,58 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Sebha extends StatelessWidget {
+class Sebha extends StatefulWidget {
   static const String routeName = "Sebha";
 
   Sebha({super.key});
 
   @override
+  State<Sebha> createState() => _SebhaState();
+}
+
+class _SebhaState extends State<Sebha> {
+  List<String> azkar = [
+    "سبحان الله",
+    "الحمد الله",
+    "لا اله الا الله",
+    "الله اكبر",
+  ];
+  int index = 0;
+  int counter = 0;
+  double turnes = 0;
+  @override
   Widget build(BuildContext context) {
-    List<String>azkar =[
-      "سبحان الله",
-      "الحمد الله",
-      "لا اله الا الله",
-      "الله اكبر",
-    ];
-    int index =0;
-    int counter =0;
     return Container(
       width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
-            flex: 3,
-              child: 
-              Image.asset("assets/images/sebha.png")
-          ),
-
+              flex: 4,
+              child: Container(
+                child: Stack(
+                  alignment: Alignment.topCenter,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(65),
+                      child: AnimatedRotation(
+                        duration: Duration(
+                          milliseconds: 25,
+                        ),
+                          turns: turnes,
+                          child: Image.asset("assets/images/body_sebha_logo.png")
+                      ),
+                    ),
+                    Container(
+                        child:
+                            Image.asset("assets/images/head_sebha_logo.png")),
+                  ],
+                ),
+              )),
           Expanded(
               flex: 3,
               child: Column(
                 children: [
-                  SizedBox(
-                    height: 43,
-                  ),
                   Container(
                     height: 39,
                     width: 154,
@@ -60,8 +79,8 @@ class Sebha extends StatelessWidget {
                       child: Text("$counter",
                           style: GoogleFonts.inter(
                             color: Color(0xFF242424),
-                            fontWeight: FontWeight.w400,
-                            fontSize: 25,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 30,
                           )),
                     ),
                   ),
@@ -70,7 +89,17 @@ class Sebha extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-
+                      setState(() {
+                        counter++;
+                        turnes+=.1;
+                        if (counter > 33) {
+                          counter = 0;
+                          index++;
+                          if (index == azkar.length) {
+                            index = 0;
+                          }
+                        }
+                      });
                     },
                     child: Container(
                       width: 137,
@@ -91,7 +120,6 @@ class Sebha extends StatelessWidget {
                   ),
                 ],
               )),
-
         ],
       ),
     );
