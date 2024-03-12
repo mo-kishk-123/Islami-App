@@ -130,6 +130,7 @@ class QuranTab extends StatelessWidget {
     return Column(
       children: [
         Container(
+          height: 175,
             alignment: Alignment.center,
             child: Image.asset("assets/images/qur2an_screen_logo.png")),
         Divider(
@@ -137,11 +138,8 @@ class QuranTab extends StatelessWidget {
           color: Color(0xFFB7935F),
         ),
         Text("إسم السورة",
-            style: GoogleFonts.elMessiri(
-              color: Color(0xFF242424),
-              fontSize: 25,
-              fontWeight: FontWeight.w600,
-            )),
+            style: Theme.of(context).textTheme.bodyLarge
+        ),
         Divider(
           thickness: 3,
           color: Color(0xFFB7935F),
@@ -164,11 +162,7 @@ class QuranTab extends StatelessWidget {
                 child: Text(
                   suraNames[index],
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.elMessiri(
-                    color: Color(0xFF242424),
-                    fontWeight: FontWeight.w400,
-                    fontSize: 25,
-                  ),
+                    style: Theme.of(context).textTheme.bodyMedium
                 ),
               );
             },

@@ -27,32 +27,12 @@ class _HomeState extends State<Home> {
               image: AssetImage("assets/images/default_bg.png"),
               fit: BoxFit.fill)),
       child: Scaffold(
-          backgroundColor: Colors.transparent,
           appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            shadowColor: Colors.transparent,
-            title: Text("إسلامي",
-                style: GoogleFonts.elMessiri(
-                  color: Color(0xFF242424),
-                  fontSize: 30,
-                  fontWeight: FontWeight.w700,
-                )),
-            centerTitle: true,
+            title: Text(
+              "إسلامي",
+            ),
           ),
           bottomNavigationBar: BottomNavigationBar(
-              type: BottomNavigationBarType.fixed,
-              backgroundColor: Color(0xFFB7935F),
-              showSelectedLabels: true,
-              showUnselectedLabels: false,
-              selectedFontSize: 15,
-              selectedItemColor: Colors.black,
-              unselectedItemColor: Colors.white,
-              unselectedIconTheme: IconThemeData(
-                size: 30,
-              ),
-              selectedIconTheme: IconThemeData(
-                size: 25,
-              ),
               currentIndex: index,
               onTap: (value) {
                 index = value;
