@@ -26,39 +26,27 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
         Image.asset("assets/images/default_bg.png",
             width: double.infinity, height: double.infinity, fit: BoxFit.fill),
         Scaffold(
-          backgroundColor: Colors.transparent,
           appBar: AppBar(
-            leading: BackButton(color: Colors.black),
-            iconTheme: IconThemeData(size: 35),
-            backgroundColor: Colors.transparent,
-            shadowColor: Colors.transparent,
-            title: Text(model.name,
-                style: GoogleFonts.elMessiri(
-                  color: Color(0xFF242424),
-                  fontSize: 30,
-                  fontWeight: FontWeight.w700,
-                )),
-            centerTitle: true,
+            title: Text(
+              model.name,
+            ),
           ),
           body: Card(
             color: Colors.white38.withOpacity(.5),
             margin: EdgeInsets.all(15),
-            shape: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(25)
-            ),
+            shape: OutlineInputBorder(borderRadius: BorderRadius.circular(25)),
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: ListView.separated(
-                separatorBuilder: (context, index) => SizedBox(
-                  height: 7,
-                ),
+                  separatorBuilder: (context, index) => SizedBox(
+                        height: 7,
+                      ),
                   itemBuilder: (context, index) {
-                    return Text(verses[index],
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.elMessiri(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                    ),);
+                    return Text(
+                      verses[index],
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    );
                   },
                   itemCount: verses.length),
             ),
@@ -69,7 +57,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   }
 
   Future<void> loadFile(int index) async {
-    String sura = await rootBundle.loadString("assets/files/${index+1}.txt");
+    String sura = await rootBundle.loadString("assets/files/${index + 1}.txt");
     List<String> lines = sura.split("\n");
     verses = lines;
     print(lines);
