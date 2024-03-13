@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islamy_app/sura_details.dart';
-import 'package:islamy_app/sura_model.dart';
+import 'package:islamy_app/models/sura_model.dart';
 
 class QuranTab extends StatelessWidget {
   static const String routeName = "Quran";
