@@ -130,7 +130,7 @@ class QuranTab extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 175,
+          height: 150,
             alignment: Alignment.center,
             child: Image.asset("assets/images/qur2an_screen_logo.png")),
         Divider(

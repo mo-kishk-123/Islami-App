@@ -9,6 +9,8 @@ import 'package:islamy_app/Home/tabs/setting_tab.dart';
 import 'package:islamy_app/my_them.dart';
 import 'package:islamy_app/sura_details.dart';
 
+import 'hadeth_details.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -29,6 +31,7 @@ class MyApp extends StatelessWidget {
         SuraDetailsScreen.routeName: (context) => SuraDetailsScreen(),
         Sebha.routeName: (context) => Sebha(),
         Ahadeth.routeName: (context) => Ahadeth(),
+        HadethDetails.routeName: (context) => HadethDetails(),
         Radioo.routeName: (context) => Radioo(),
         Setting.routeName: (context) => Setting(),
       },
