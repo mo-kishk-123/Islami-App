@@ -52,10 +52,10 @@ class _AhadethState extends State<Ahadeth> {
               return InkWell(
                 onTap: () {
                   Navigator.pushNamed(context, HadethDetails.routeName,
-                  arguments: ahadethData[index]);
+                      arguments: ahadethData[index]);
                 },
                 child: Text(ahadethData[index].title,
-                textAlign: TextAlign.center,
+                    textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyMedium),
               );
             },

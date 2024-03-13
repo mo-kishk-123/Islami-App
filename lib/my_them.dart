@@ -52,10 +52,7 @@ class MyThemData {
         fontWeight: FontWeight.w700,
       ),
     ),
-
-
   );
-
 
   static ThemeData darkThem = ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
@@ -67,7 +64,10 @@ class MyThemData {
       showUnselectedLabels: false,
       selectedItemColor: Color(0xFFFACC1D),
       unselectedItemColor: Colors.white,
-      selectedLabelStyle: TextStyle(fontSize: 15,color: Color(0xFFFACC1D),),
+      selectedLabelStyle: TextStyle(
+        fontSize: 15,
+        color: Color(0xFFFACC1D),
+      ),
       unselectedIconTheme: IconThemeData(
         size: 30,
       ),
@@ -107,7 +107,5 @@ class MyThemData {
         fontWeight: FontWeight.w700,
       ),
     ),
-
-
   );
 }

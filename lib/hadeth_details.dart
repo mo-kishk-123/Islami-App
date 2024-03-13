@@ -3,6 +3,7 @@ import 'package:islamy_app/models/hadeth_model.dart';
 
 class HadethDetails extends StatelessWidget {
   static const String routeName = "hadeth details";
+
   const HadethDetails({super.key});
 
   @override
@@ -18,20 +19,21 @@ class HadethDetails extends StatelessWidget {
           ),
           body: Center(
             child: Container(
-              height: MediaQuery.of(context).size.height*.7,
+              height: MediaQuery.of(context).size.height * .7,
               margin: EdgeInsets.all(15),
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(25)
-              ),
-              child: ListView.builder(itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Text(modal.content[index],
-                  textAlign: TextAlign.center,),
-                );
-              },
-              itemCount: modal.content.length),
+                  color: Colors.white, borderRadius: BorderRadius.circular(25)),
+              child: ListView.builder(
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Text(
+                        modal.content[index],
+                        textAlign: TextAlign.center,
+                      ),
+                    );
+                  },
+                  itemCount: modal.content.length),
             ),
           ),
         ),
