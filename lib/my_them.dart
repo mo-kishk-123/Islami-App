@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyThemData {
+  static const Color primaryColor = Color(0xFFB7935F);
+  static const Color blackColor = Colors.black;
+  static const Color yellowColor = Colors.amber;
+
   static ThemeData lightThem = ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
     brightness: Brightness.light,
@@ -57,6 +61,7 @@ class MyThemData {
   static ThemeData darkThem = ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
     brightness: Brightness.light,
+    bottomSheetTheme: BottomSheetThemeData(backgroundColor: Colors.black),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
       backgroundColor: Color(0xFF141A2E),
@@ -86,7 +91,7 @@ class MyThemData {
         fontWeight: FontWeight.w700,
       ),
       iconTheme: IconThemeData(
-        color: Colors.black54,
+        color: Colors.white,
         size: 30,
       ),
     ),

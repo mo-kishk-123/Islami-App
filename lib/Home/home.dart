@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islamy_app/Home/tabs/ahadeth_tab.dart';
 import 'package:islamy_app/Home/tabs/quran_tab.dart';
 import 'package:islamy_app/Home/tabs/radio_tab.dart';
 import 'package:islamy_app/Home/tabs/sebha_tab.dart';
 import 'package:islamy_app/Home/tabs/setting_tab.dart';
+import 'package:islamy_app/provider/my_provider.dart';
+import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
   static const String routeName = "Home";
@@ -21,15 +24,16 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/default_bg.png"),
+              image: AssetImage(provider.getBackGroundPath()),
               fit: BoxFit.fill)),
       child: Scaffold(
           appBar: AppBar(
             title: Text(
-              "إسلامي",
+              AppLocalizations.of(context)!.app_name,
             ),
           ),
           bottomNavigationBar: BottomNavigationBar(
@@ -41,19 +45,20 @@ class _HomeState extends State<Home> {
               items: [
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage("assets/images/icon_quran.png")),
-                    label: "القران"),
+                    label: AppLocalizations.of(context)!.quran),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage("assets/images/icon_sebha.png")),
-                    label: "سبحه"),
+                    label: AppLocalizations.of(context)!.sebha),
                 BottomNavigationBarItem(
                     icon:
                         ImageIcon(AssetImage("assets/images/icon_hadeth.png")),
-                    label: "الاحاديث"),
+                    label: AppLocalizations.of(context)!.ahadeth),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage("assets/images/icon_radio.png")),
-                    label: "راديو"),
+                    label: AppLocalizations.of(context)!.radio),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.settings), label: "الاعدادات"),
+                    icon: Icon(Icons.settings),
+                    label: AppLocalizations.of(context)!.setting),
               ]),
           body: tabs[index]),
     );

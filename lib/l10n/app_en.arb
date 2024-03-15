@@ -1,0 +1,16 @@
+{
+  "app_name": "Islami",
+  "suraName": "Sura Name",
+  "ahadeth": "Ahadeth",
+  "added_eltasbehat": "Number Of Praises",
+  "language": "Language",
+  "english": "English",
+  "arabic": "Arabic",
+  "theme": "Theme",
+  "light": "Light",
+  "dark": "Dark",
+  "quran": "Quran",
+  "sebha": "Sebha",
+  "radio": "Radio",
+  "setting": "Setting"
+}

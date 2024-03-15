@@ -1,0 +1,16 @@
+{
+  "app_name": "إسلامي",
+  "suraName": "إسم السوره",
+  "ahadeth": "الاحاديث",
+  "added_eltasbehat": "عدد التسبيحات",
+  "language": "اللغه",
+  "english": "الانجليزيه",
+  "arabic": "عربى",
+  "theme": "الواجهه",
+  "light": "فاتح",
+  "dark": "غامق",
+  "quran": "القران",
+  "sebha": "سبحه",
+  "radio": "راديو",
+  "setting": "الاعدادات"
+}

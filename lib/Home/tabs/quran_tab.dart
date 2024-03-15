@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:islamy_app/sura_details.dart';
+import 'package:islamy_app/sura_details/sura_details.dart';
 import 'package:islamy_app/models/sura_model.dart';
 
 class QuranTab extends StatelessWidget {
@@ -137,7 +138,8 @@ class QuranTab extends StatelessWidget {
           thickness: 3,
           color: Color(0xFFB7935F),
         ),
-        Text("إسم السورة", style: Theme.of(context).textTheme.bodyLarge),
+        Text(AppLocalizations.of(context)!.suraName,
+            style: Theme.of(context).textTheme.bodyLarge),
         Divider(
           thickness: 3,
           color: Color(0xFFB7935F),

@@ -53,17 +53,9 @@ class _SebhaState extends State<Sebha> {
               flex: 3,
               child: Column(
                 children: [
-                  Container(
-                    height: 39,
-                    width: 154,
-                    child: Text(
-                      "عدد التسبيحات",
-                      style: GoogleFonts.elMessiri(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF242424),
-                      ),
-                    ),
+                  Text(
+                    "عدد التسبيحات",
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   SizedBox(
                     height: 26,
@@ -77,13 +69,10 @@ class _SebhaState extends State<Sebha> {
                     ),
                     child: Center(
                       child: Text("$counter",
-                          style: GoogleFonts.inter(
-                            color: Color(0xFF242424),
-                            fontWeight: FontWeight.w700,
-                            fontSize: 30,
-                          )),
+                          style: Theme.of(context).textTheme.bodyLarge
+                          )
                     ),
-                  ),
+                    ),
                   SizedBox(
                     height: 22,
                   ),
